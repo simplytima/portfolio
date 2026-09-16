@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- THEME TOKENS ---------- */
+
+:root {
+  /* Light mode (default) */
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --border: #e5e5e5;
+  --text: #171717;
+  --muted: #525252;
+  --accent: #b8941f;
+}
+
+.dark {
+  /* Dark mode  */
+  --bg: #050505;
+  --surface: #0f0f0f;
+  --border: #1f1f1f;
+  --text: #e5e5e5;
+  --muted: #737373;
+  --accent: #d4af37;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 9999px;
+  opacity: 0.4;
+}
